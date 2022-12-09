@@ -1,0 +1,3 @@
+model: GL.iNet GL-AR300M16
+firmware_id: glinet_gl-ar300m16
+port: ether18

@@ -1,0 +1,4 @@
+model: Ubiquiti NanoStation M5 XM
+firmware_id: ubnt_nanostation-m
+port: ether24
+low_memory: true

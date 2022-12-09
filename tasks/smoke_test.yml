@@ -1,0 +1,40 @@
+- name: Smoke test
+  block:
+  - name: Wait until web server
+    wait_for:
+      host: "{{ ansible_host }}"
+      port: 80
+      state: drained
+  - name: Load version
+    setup:
+    register: version
+    delegate_to: ansible_host
+  - name: Check version
+    debug:
+      msg: "Version"
+    failed_when: not (version.ansible_facts.ansible_distribution_version|lower in firmware.stat.path|lower)
+  - name: Load status page
+    uri:
+      url: "http://{{ ansible_host }}/cgi-bin/status"
+      return_content: true
+    register: page
+    until: page.status == 200
+    retries: 5
+    delay: 5
+  - name: Check status page
+    debug:
+      msg: "Status page"
+    failed_when: not ("host entries" in page.content)
+  - name: Load mesh page
+    uri:
+      url: "http://{{ ansible_host }}/cgi-bin/mesh"
+      return_content: true
+    register: page
+    until: page.status == 200
+    retries: 5
+    delay: 5
+  - name: Check mesh page
+    debug:
+      msg: "Mesh page"
+    failed_when: not ("Remote Nodes" in page.content)
+  delegate_to: localhost

@@ -1,0 +1,3 @@
+model: MikroTik RouterBOARD LHG 2nD
+firmware_id: mikrotik-lhg-2nd
+port: ether11

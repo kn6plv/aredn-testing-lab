@@ -1,0 +1,19 @@
+- name: Find firmware file
+  block:
+  - name: Locate
+    ansible.builtin.find:
+      paths: "{{ firmware_root }}"
+      patterns: ".*aredn-.*{{ firmware_id }}-sysupgrade.bin"
+      recurse: yes
+      use_regex: true
+    register: firmware
+  - name: Get firmware version info
+    ansible.builtin.stat:
+      path: "{{ firmware.files[0].path }}"
+      checksum_algorithm: "sha256"
+    register: firmware
+  delegate_to: localhost
+- name: Firmware needs updating
+  debug:
+    msg: "new: {{ firmware.stat.path|regex_replace('^.*aredn-(.*-[a-f0-9]*)-.*$', '\\1')|lower }} old: {{ ansible_distribution_version|lower }}"
+  when: not (ansible_distribution_version|lower in firmware.stat.path|lower)

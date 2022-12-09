@@ -1,0 +1,3 @@
+model: MikroTik RouterBOARD LHG 5nD
+firmware_id: mikrotik-lhg-5nd
+port: ether10

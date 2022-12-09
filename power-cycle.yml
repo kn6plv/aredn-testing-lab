@@ -1,0 +1,19 @@
+- import_playbook: kn6plv.aredn.base
+
+- hosts: all
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: Power Off
+    include_tasks: tasks/poe.yml
+    vars:
+      poe: False
+  - name: Wait a moment
+    pause:
+      seconds: 2
+    run_once: true
+    delegate_to: localhost
+  - name: Power On
+    include_tasks: tasks/poe.yml
+    vars:
+      poe: True

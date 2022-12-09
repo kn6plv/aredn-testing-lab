@@ -1,0 +1,3 @@
+model: TP-Link CPE210 v2
+firmware_id: tplink_cpe210-v2
+port: ether9

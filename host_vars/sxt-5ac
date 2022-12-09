@@ -1,0 +1,3 @@
+model: Mikrotik RouterBOARD SXT 5AC
+firmware_id: mikrotik_sxtsq-5-ac
+port: ether16

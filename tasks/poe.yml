@@ -1,0 +1,13 @@
+- name: Set POE state
+  uri:
+    method: PATCH
+    url: "https://192.168.51.29/rest/interface/ethernet/poe/{{ port }}"
+    url_username: admin
+    url_password: admin
+    body_format: json
+    body: >-
+      {{ { "poe-out": "forced-on" if poe else "off" } }}
+    force: true
+    force_basic_auth: true
+    validate_certs: false
+  delegate_to: localhost

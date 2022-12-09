@@ -1,0 +1,4 @@
+model: Ubiquiti NanoBridge M3
+firmware_id: ubnt_nanobridge-m
+port: ether15
+low_memory: true

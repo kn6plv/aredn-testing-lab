@@ -1,0 +1,3 @@
+model: Ubiquiti Rocket AC5 Lite
+firmware_id: rocket-5ac-lite
+port: ether5

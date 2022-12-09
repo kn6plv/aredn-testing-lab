@@ -1,0 +1,3 @@
+model: Ubiquiti Rocket M5 XW
+firmware_id: ubnt_rocket-m-xw
+port: ether6

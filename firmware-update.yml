@@ -1,0 +1,13 @@
+- import_playbook: kn6plv.aredn.base
+
+- hosts: all
+  gather_facts: yes
+  serial: 1
+  tasks:
+  - name: Update firmware
+    include_tasks: tasks/firmware_update.yml
+    when: not (low_memory|default(false)) or force|default(false)
+  handlers:
+  - name: Smoke test
+    include_tasks: tasks/smoke_test.yml
+    listen: firmware updated

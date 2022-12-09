@@ -1,0 +1,3 @@
+model: Ubiquiti NanoStation M2 XW
+firmware_id: nanostation-m-xw
+port: ether21

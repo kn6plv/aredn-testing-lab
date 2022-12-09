@@ -1,0 +1,3 @@
+model: Mikrotik HAP2
+firmware_id: mikrotik_hap-ac2
+port: ether20

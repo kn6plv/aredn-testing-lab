@@ -1,0 +1,3 @@
+model: TP-Link CPE710 v1
+firmware_id: tplink_cpe710-v1
+port: ether13

@@ -1,0 +1,10 @@
+- import_playbook: kn6plv.aredn.base
+
+- hosts: all
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: Power On
+    include_tasks: tasks/poe.yml
+    vars:
+      poe: True

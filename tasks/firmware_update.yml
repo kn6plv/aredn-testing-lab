@@ -1,0 +1,40 @@
+- name: Find firmware file
+  block:
+  - name: Locate
+    ansible.builtin.find:
+      paths: "{{ firmware_root }}"
+      patterns: ".*aredn-.*{{ firmware_id }}-sysupgrade.bin"
+      recurse: yes
+      use_regex: true
+    register: firmware
+  - name: Get firmware version info
+    ansible.builtin.stat:
+      path: "{{ firmware.files[0].path }}"
+      checksum_algorithm: "sha256"
+    register: firmware
+  delegate_to: localhost
+- name: Update node firmware if necessary
+  block:
+    - name: Upload firmware to node
+      copy:
+        src: "{{ firmware.stat.path }}"
+        dest: /tmp/firmware
+        mode: "644"
+    - name: Update node
+      firmware:
+        file: /tmp/firmware
+        sha256: "{{ firmware.stat.checksum }}"
+    - name: Wait for reboot
+      wait_for_connection:
+        delay: 200
+        timeout: 600
+    - name: Wait for webserver
+      wait_for:
+        host: "{{ ansible_host }}"
+        port: 80
+        state: drained
+        delay: 30
+        timeout: 120
+      delegate_to: localhost
+  notify: firmware updated
+  when: not (ansible_distribution_version|lower in firmware.stat.path|lower) or force|default(false)
