@@ -1,0 +1,3 @@
+model: Ubiquiti LiteBeam 5AC Gen2
+firmware_id: ubnt_litebeam-ac-gen2
+port: ether14

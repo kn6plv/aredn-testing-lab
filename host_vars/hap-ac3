@@ -1,0 +1,3 @@
+model: Mikrotik hAP AC3
+firmware_id: mikrotik_hap-ac3
+port: ether12

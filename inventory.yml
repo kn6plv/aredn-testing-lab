@@ -1,19 +1,24 @@
 all:
   hosts:
-    rocket-5ac:
-    cpe710v1:
-    cpe210v2:
-    hap:
     hap-ac2:
-    nsm2-xw:
     sxt-5ac:
+    rocket-5ac:
+    hap:
+    cpe710v1:
     lhg-5nd:
+    ar750:
+    cpe210v2:
+    hap-ac3:
+    nsm2-xw:
     lhg-2nd:
     nsm5-loco-xw:
     sxt-lite5:
     rocket-m2-xm:
     rocket-m5-xw:
     ar300m16:
+    litebeam-5ac-gen2:
+    nsm5-xw:
+    basebox-5:
     nsm2-xm:
     nsm5-xm:
     nanobridge-m3:
