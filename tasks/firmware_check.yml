@@ -3,7 +3,7 @@
   - name: Locate
     ansible.builtin.find:
       paths: "{{ firmware_root }}"
-      patterns: ".*aredn-.*{{ firmware_id }}-sysupgrade.bin"
+      patterns: ".*aredn-.*{{ firmware_id }}-squashfs.*-sysupgrade.bin"
       recurse: yes
       use_regex: true
     register: firmware

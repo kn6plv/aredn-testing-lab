@@ -6,7 +6,6 @@
   tasks:
   - name: Update firmware
     include_tasks: tasks/firmware_update.yml
-    when: not (low_memory|default(false)) or force|default(false)
   handlers:
   - name: Smoke test
     include_tasks: tasks/smoke_test.yml

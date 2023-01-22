@@ -3,7 +3,7 @@
   - name: Locate
     ansible.builtin.find:
       paths: "{{ firmware_root }}"
-      patterns: ".*aredn-.*{{ firmware_id }}-sysupgrade.bin"
+      patterns: ".*aredn-.*{{ firmware_id }}-squashfs.*-sysupgrade.bin"
       recurse: yes
       use_regex: true
     register: firmware
@@ -15,6 +15,9 @@
   delegate_to: localhost
 - name: Update node firmware if necessary
   block:
+    - name: Restart if necessary
+      include_tasks: power_cycle_and_wait.yml
+      when: low_memory|default(false)
     - name: Upload firmware to node
       copy:
         src: "{{ firmware.stat.path }}"
@@ -24,6 +27,7 @@
       firmware:
         file: /tmp/firmware
         sha256: "{{ firmware.stat.checksum }}"
+        shutdown_services: false
     - name: Wait for reboot
       wait_for_connection:
         delay: 200

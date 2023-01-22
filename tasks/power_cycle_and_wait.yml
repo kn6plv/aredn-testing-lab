@@ -1,0 +1,22 @@
+- name: Power Cycle and Wait
+  block:
+  - name: Power Off
+    include_tasks: poe.yml
+    vars:
+      poe: False
+  - name: Wait a moment
+    pause:
+      seconds: 1
+    delegate_to: localhost
+  - name: Power On
+    include_tasks: poe.yml
+    vars:
+      poe: True
+  - name: Wait for startup
+    wait_for_connection:
+      delay: 60
+      timeout: 600
+  - name: Wait for ssh to be stable 
+    wait_for_connection:
+      delay: 20
+      timeout: 1200

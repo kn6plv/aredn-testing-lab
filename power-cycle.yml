@@ -10,7 +10,7 @@
       poe: False
   - name: Wait a moment
     pause:
-      seconds: 2
+      seconds: 1
     run_once: true
     delegate_to: localhost
   - name: Power On
