@@ -16,10 +16,11 @@ all:
     sxt-lite2:
     rocket-m2-xm:
     rocket-m5-xw:
+    rocket-m2-xw:
     ar300m16:
     litebeam-5ac-gen2:
     nsm5-xw:
     basebox-5:
-    nsm2-xm:
+    nanobeam-2ac:
     nsm5-xm:
     nanobridge-m3:

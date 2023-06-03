@@ -1,0 +1,3 @@
+model: Ubiquiti NanoBeam 2AC
+firmware_id: ubnt_nanobeam-2ac
+port: ether23
