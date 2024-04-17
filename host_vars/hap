@@ -1,3 +1,4 @@
 model: Mikrotik HAP
 firmware_id: mikrotik_routerboard-952ui-5ac2nd
+switch: switch0
 port: ether19

@@ -1,3 +1,4 @@
 model: Ubiquiti Rocket M2 XM
 firmware_id: ubnt_rocket-m
+switch: switch0
 port: ether7

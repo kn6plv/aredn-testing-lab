@@ -1,3 +1,4 @@
 model: Mikrotik RouterBOARD SXT 5nD (SXT Lite5)
 firmware_id: mikrotik_routerboard-sxt-5nd
+switch: switch0
 port: ether17

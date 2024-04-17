@@ -1,3 +1,4 @@
 model: Mikrotik RouterBOARD BaseBox 5
 firmware_id: mikrotik_routerboard-912uag-5hpnd
+switch: switch0
 port: ether4

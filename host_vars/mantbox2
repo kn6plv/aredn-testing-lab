@@ -1,0 +1,4 @@
+model: MikroTik RouterBOARD mANTBox2
+firmware_id: mikrotik_routerboard-911g-2hpnd-12s
+switch: switch1
+port: ether3

@@ -1,3 +1,4 @@
 model: Ubiquiti NanoStation Loco M5 XM
 firmware_id: ubnt_nanostation-loco-m-xw
-port: ether22
+switch: switch0
+port: ether23

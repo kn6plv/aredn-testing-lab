@@ -1,5 +1,6 @@
 all:
   hosts:
+    x86:
     hap-ac2:
     sxt-5ac:
     rocket-5ac:
@@ -9,7 +10,7 @@ all:
     ar750:
     cpe210v2:
     hap-ac3:
-    nsm2-xw:
+    nanobeam-2ac:
     lhg-2nd:
     nsm5-loco-xw:
     sxt-lite5:
@@ -21,6 +22,9 @@ all:
     litebeam-5ac-gen2:
     nsm5-xw:
     basebox-5:
-    nanobeam-2ac:
-    nsm5-xm:
-    nanobridge-m3:
+    ldf-5nd:
+    mantbox:
+    mantbox2:
+    nsm2-xw:
+    #nsm2-xm:
+    #nanobridge-m3:

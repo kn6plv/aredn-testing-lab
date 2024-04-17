@@ -15,5 +15,5 @@
   delegate_to: localhost
 - name: Firmware needs updating
   debug:
-    msg: "new: {{ firmware.stat.path|regex_replace('^.*aredn-(.*-[a-f0-9]*)-.*$', '\\1')|lower }} old: {{ ansible_distribution_version|lower }}"
+    msg: "new: {{ firmware.stat.path|regex_replace('^.*aredn-(.*-[a-f0-9]{4,})-.*$', '\\1')|lower }} old: {{ ansible_distribution_version|lower }}"
   when: not (ansible_distribution_version|lower in firmware.stat.path|lower)

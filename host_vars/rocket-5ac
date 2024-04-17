@@ -1,3 +1,4 @@
 model: Ubiquiti Rocket 5AC Lite
 firmware_id: ubnt_rocket-5ac-lite
+switch: switch0
 port: ether5

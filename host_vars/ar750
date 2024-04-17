@@ -1,3 +1,4 @@
 model: GL.iNet GL-AR750
 firmware_id: glinet_gl-ar750
+switch: switch0
 port: ether15

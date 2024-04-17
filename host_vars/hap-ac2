@@ -1,3 +1,4 @@
 model: Mikrotik hAP AC2
 firmware_id: mikrotik_hap-ac2
+switch: switch0
 port: ether20

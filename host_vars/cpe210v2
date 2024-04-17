@@ -1,3 +1,4 @@
 model: TP-Link CPE210 v2
 firmware_id: tplink_cpe210-v2
+switch: switch0
 port: ether9

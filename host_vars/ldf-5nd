@@ -1,0 +1,4 @@
+model: MikroTik RouterBOARD LDF 5nD
+firmware_id: mikrotik_routerboard-ldf-5nd
+switch: switch1
+port: ether1

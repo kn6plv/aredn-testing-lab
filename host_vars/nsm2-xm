@@ -1,4 +1,5 @@
 model: Ubiquiti NanoStation M2 XM
 firmware_id: ubnt_nanostation-m
-port: ether23
-low_memory: true
+switch: switch0
+port: ether22
+#low_memory: true

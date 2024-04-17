@@ -1,3 +1,4 @@
 model: Ubiquiti Rocket M2 XW
 firmware_id: ubnt_rocket-m2-xw
+switch: switch0
 port: ether2

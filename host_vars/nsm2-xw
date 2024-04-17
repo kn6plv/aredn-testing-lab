@@ -1,3 +1,4 @@
 model: Ubiquiti NanoStation M2 XW
 firmware_id: ubnt_nanostation-m-xw
+switch: switch0
 port: ether21

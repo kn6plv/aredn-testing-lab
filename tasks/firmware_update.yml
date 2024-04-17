@@ -3,7 +3,9 @@
   - name: Locate
     ansible.builtin.find:
       paths: "{{ firmware_root }}"
-      patterns: ".*aredn-.*{{ firmware_id }}-squashfs.*-sysupgrade.bin"
+      patterns:
+      -  ".*aredn-.*{{ firmware_id }}-squashfs.*-sysupgrade.bin"
+      -  ".*aredn-.*{{ firmware_id }}.img.gz"
       recurse: yes
       use_regex: true
     register: firmware
@@ -37,8 +39,8 @@
         host: "{{ ansible_host }}"
         port: 80
         state: drained
-        delay: 30
-        timeout: 120
+        delay: 60
+        timeout: 240
       delegate_to: localhost
   notify: firmware updated
   when: not (ansible_distribution_version|lower in firmware.stat.path|lower) or force|default(false)

@@ -1,3 +1,4 @@
 model: Ubiquiti NanoStation M5 XW
 firmware_id: ubnt_nanostation-m-xw
+switch: switch0
 port: ether8

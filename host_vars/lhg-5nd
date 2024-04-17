@@ -1,3 +1,4 @@
 model: MikroTik RouterBOARD LHG 5nD
 firmware_id: mikrotik_routerboard-lhg-5nd
+switch: switch0
 port: ether10
