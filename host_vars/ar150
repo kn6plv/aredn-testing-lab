@@ -1,0 +1,4 @@
+model: GL.iNet GL-AR150
+firmware_id: glinet_gl-ar150
+switch: switch0
+port: ether22
