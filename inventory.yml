@@ -4,10 +4,10 @@ all:
       hosts:
        x86-2:
        lhg-5nd:
+       hap-ac2:
     testing:
       hosts:
         x86:
-        hap-ac2:
         sxt-5ac:
         rocket-5ac:
         hap:
@@ -32,5 +32,6 @@ all:
         mantbox2:
         ar150:
         nsm2-xw:
+        #bullet-m2-hp:
         #nsm2-xm:
         #nanobridge-m3:

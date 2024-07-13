@@ -19,7 +19,7 @@
   block:
     - name: Restart if necessary
       include_tasks: power_cycle_and_wait.yml
-      when: low_memory|default(false)
+      when: restart_first|default(false)
     - name: Upload firmware to node
       copy:
         src: "{{ firmware.stat.path }}"

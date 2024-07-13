@@ -1,0 +1,4 @@
+model: Ubiquiti Bullet M5 HP
+firmware_id: ubnt_bullet-m-ar7241
+switch: switch1
+port: ether5

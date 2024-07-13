@@ -2,4 +2,3 @@ model: Ubiquiti NanoBridge M3
 firmware_id: ubnt_nanobridge-m
 switch: switch0
 port: ether1
-#low_memory: true
